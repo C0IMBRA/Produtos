@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+
+# Produtos
+RewriteRule ^produtos/?$ Views/Produtos/index.php [NC,L]
+RewriteRule ^produtos/adicionar/?$  Views/produtos/adicionar.php [NC,L]
+RewriteRule ^produtos/editar/(\d+)/?$ Views/Produtos/editar.php?id=$1 [NC,L]
+RewriteRule ^produtos/deletar/(\d+)/?$ Views/Produtos/deletar.php?id=$1 [NC,L]
+RewriteRule ^produtos/visualizar/(\d+)/?$ Views/Produtos/visualizar.php?id=$1 [NC,L]
+
