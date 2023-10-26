@@ -9,17 +9,18 @@ class Produtos {
     private $cor;
 
     public function adicionar() {
+        return view('Produtos.adicionar');
     }
 
     public function editar() {
+        return view('Produtos.editar');
     }
 
     public function visualizar() {
-        $sql = "SELECT * FROM produtos WHERE id = 1";
-        echo "ID: " . $produto['id'] . "<br>";
-        echo "ID: " . $produto['nome'] . "<br>";
+        return view('Produtos.visualizar');
     }
 
     public function deletar() {
+        return view('Produtos.deletar');
     }
 }
