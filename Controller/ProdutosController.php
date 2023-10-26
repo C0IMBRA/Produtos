@@ -1,11 +1,12 @@
 <?php
 
-require_once 'config/conexao.php';
+require_once '../config/database.php';
 require_once 'models/Produtos.php';
 
 class ProdutosController {
     public function adicionar() {
         $produto = new Produtos();
+
         include 'Views/Produtos/adicionar.php';
     }
     public function deletar() {
