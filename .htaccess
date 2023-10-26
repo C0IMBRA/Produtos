@@ -4,8 +4,8 @@ RewriteEngine On
 
 # Produtos
 RewriteRule ^produtos/?$ Controller/ProdutosController.php [NC,L]
-RewriteRule ^produtos/adicionar/?$  Views/produtos/adicionar.php [NC,L]
-RewriteRule ^produtos/editar/(\d+)/?$ Views/Produtos/editar.php?id=$1 [NC,L]
-RewriteRule ^produtos/deletar/(\d+)/?$ Views/Produtos/deletar.php?id=$1 [NC,L]
-RewriteRule ^produtos/visualizar/(\d+)/?$ Views/Produtos/visualizar.php?id=$1 [NC,L]
+RewriteRule ^produtos/adicionar/?$  Controller/ProdutosController.php [NC,L]
+RewriteRule ^produtos/editar/(\d+)/?$ Controller/ProdutosController.php [NC,L]
+RewriteRule ^produtos/deletar/(\d+)/?$ Controller/ProdutosController.php [NC,L]
+RewriteRule ^produtos/visualizar/(\d+)/?$ Controller/ProdutosController.php [NC,L]
 
