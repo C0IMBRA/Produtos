@@ -1,7 +1,7 @@
 <?php
 
-require_once '../config/database.php';
-require_once 'models/Produtos.php';
+require_once '../Config/database.php';
+require_once '../Model/Produtos.php';
 
 class ProdutosController {
     public function adicionar() {
