@@ -6,19 +6,20 @@ require_once '../Model/Produtos.php';
 class ProdutosController {
     public function adicionar() {
         $produto = new Produtos();
-
-        include 'Views/Produtos/adicionar.php';
     }
     public function deletar() {
         $produto = new Produtos();
+
     }
 
     public function visualizar() {
         $produto = new Produtos();
+
     }
 
     public function editar() {
         $produto = new Produtos();
+
     }
 }
 
