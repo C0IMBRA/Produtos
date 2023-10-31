@@ -1,11 +1,8 @@
 Options +FollowSymLinks
 RewriteEngine On
 
-
-# Produtos
-RewriteRule ^produtos/?$ Controller/ProdutosController.php [NC,L]
-RewriteRule ^produtos/adicionar/?$  Controller/ProdutosController.php [NC,L]
-RewriteRule ^produtos/editar/(\d+)/?$ Controller/ProdutosController.php [NC,L]
-RewriteRule ^produtos/deletar/(\d+)/?$ Controller/ProdutosController.php [NC,L]
-RewriteRule ^produtos/visualizar/(\d+)/?$ Controller/ProdutosController.php [NC,L]
-
+# Roteamento para URLs amigáveis relacionadas a produtos
+RewriteRule ^produtos/adicionar/?$  Controller/ProdutosController.php?action=adicionar [NC,L]
+RewriteRule ^produtos/editar/(\d+)/?$ Controller/ProdutosController.php?action=editar&id=$1 [NC,L]
+RewriteRule ^produtos/deletar/(\d+)/?$ Controller/ProdutosController.php?action=deletar&id=$1 [NC,L]
+RewriteRule ^produtos/visualizar/(\d+)/?$ Controller/ProdutosController.php?action=visualizar&id=$1 [NC,L]

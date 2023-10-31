@@ -9,18 +9,18 @@ class Produtos {
     private $cor;
 
     public function adicionar() {
-        return view('Produtos.adicionar');
+        include('../Views/Produtos/adicionar.php');
     }
 
     public function editar() {
-        return view('Produtos.editar');
+        include('../Views/Produtos/editar.php');
     }
 
     public function visualizar() {
-        return view('Produtos.visualizar');
+        include('../Views/Produtos/visualizar.php');
     }
 
     public function deletar() {
-        return view('Produtos.deletar');
+        include('../Views/Produtos/deletar.php');
     }
 }
