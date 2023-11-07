@@ -1,7 +1,7 @@
 <?php
-$host = 'localhost';
+$host = 'localhost:33007';
 $username = 'root';
-$password = '';
+$password = 'root_password';
 $database = 'coimbra_db';
 
 try {
