@@ -11,6 +11,11 @@ class Produtos {
         include('../Views/Produtos/adicionar.php');
     }    
 
+    public function index(){
+        $query = "SELECT * FROM produtos";
+        return $query;
+    }
+
     public function editar() {
     }
 

@@ -6,9 +6,18 @@ require_once '../Model/Produtos.php';
 //SEMPRE CRIAR A FUNÇÃO DE CONSTRUCT, PARA INICIARLIZAR A CONTROLLER.  
 
 class ProdutosController {
-    public function __construct(){
+    public $conn;
+    public function __construct($conn=null){
+        $this->conn = $conn;
         $action = $_GET['action'];
         return $this->{$action}();
+    }
+
+    public function index() {
+        $produto = new Produtos();
+        $query = $produto->index();
+        $result = $this->conn->query($query);        
+        include('../Views/Produtos/index.php');
     }
 
     public function adicionar() {
@@ -31,4 +40,4 @@ class ProdutosController {
         include('../Views/Produtos/editar.php');
     }
 }
-new ProdutosController();
+new ProdutosController($conn);
