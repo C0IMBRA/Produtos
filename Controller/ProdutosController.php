@@ -3,6 +3,8 @@
 require_once '../Config/database.php';
 require_once '../Model/Produtos.php';
 
+//SEMPRE CRIAR A FUNÇÃO DE CONSTRUCT, PARA INICIARLIZAR A CONTROLLER.  
+
 class ProdutosController {
     public function __construct(){
         $action = $_GET['action'];
