@@ -21,6 +21,47 @@
             margin-bottom: 20px;
         }
 
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        #botaoAdicionar {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: #fff;
+            margin-left: 190px;
+            text-decoration: none;
+            
+        }
+
+        input#botaoVisualizar {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        input#botaoEditar {
+            background-color: #ffc107;
+            color: #000;
+        }
+
+        input#botaoExcluir {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        input[type="submit"]:hover {
+            filter: brightness(0.9);
+        }
+
         table {
             width: 80%;
             margin: 20px auto;
@@ -53,6 +94,7 @@
 </head>
 <body>
     <h1>Lista de Produtos</h1>
+    <a href="http://coimbra.com/produtos/adicionar/" id="botaoAdicionar">Adicionar</a>
     <div style="display:flex;">
         <table>
             <tr>
@@ -61,6 +103,7 @@
                 <th>Cor</th>
                 <th>Preço (R$)</th>
                 <th>Valor de Venda (R$)</th>
+                <th>Ações</th>
             </tr>
             <?php foreach ($result as $info): ?>
                 <tr>
@@ -69,6 +112,11 @@
                     <td><?php echo $info['cor']; ?></td>
                     <td><?php echo number_format($info['preco'], 2, ',', '.'); ?></td>
                     <td><?php echo number_format($info['valor_venda'], 2, ',', '.'); ?></td>
+                    <td>
+                        <input type="submit" id="botaoVisualizar" value="Visualizar">
+                        <input type="submit" id="botaoEditar" value="Editar">
+                        <input type="submit" id="botaoExcluir" value="Excluir">
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </table>
