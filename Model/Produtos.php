@@ -1,14 +1,15 @@
 <?php
 class Produtos {
-
-    private $id;
-    private $nome;
-    private $preco;
-    private $valor_venda;
-    private $cor;
-
+    public $conn;
     public function adicionar() {
-        include('../Views/Produtos/adicionar.php');
+
+        $nome = $_POST['nome'];
+        $cor = $_POST['cor'];
+        $valor = $_POST['preco'];
+        $valor_venda = $_POST['valor_venda'];
+        $query = "INSERT INTO produtos (nome, cor, preco, valor_venda) VALUES ('$nome', '$cor', $valor, $valor_venda)";
+
+        return $query;
     }    
 
     public function index(){
@@ -25,3 +26,5 @@ class Produtos {
     public function deletar() {
     }
 }
+
+new Produtos($conn);

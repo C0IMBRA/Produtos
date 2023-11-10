@@ -22,6 +22,12 @@ class ProdutosController {
 
     public function adicionar() {
         $produto = new Produtos();
+        if(!empty($_POST)){
+            $query = $produto->adicionar();
+            $result = $this->conn->query($query);
+            header("Location: http://coimbra.com/produtos/index/");
+            exit;
+        }
         include('../Views/Produtos/adicionar.php');
     }
 
