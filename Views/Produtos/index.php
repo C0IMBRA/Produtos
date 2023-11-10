@@ -43,19 +43,40 @@
             
         }
 
-        input#botaoVisualizar {
+        #botaoVisualizar {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
             background-color: #007bff;
             color: #fff;
+            text-decoration: none;
         }
 
-        input#botaoEditar {
+        #botaoEditar {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
             background-color: #ffc107;
             color: #000;
+            text-decoration: none;
         }
 
-        input#botaoExcluir {
+        #botaoExcluir {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
             background-color: #dc3545;
             color: #fff;
+            text-decoration: none;
         }
 
         input[type="submit"]:hover {
@@ -113,9 +134,10 @@
                     <td><?php echo number_format($info['preco'], 2, ',', '.'); ?></td>
                     <td><?php echo number_format($info['valor_venda'], 2, ',', '.'); ?></td>
                     <td>
-                        <input type="submit" id="botaoVisualizar" value="Visualizar">
-                        <input type="submit" id="botaoEditar" value="Editar">
-                        <input type="submit" id="botaoExcluir" value="Excluir">
+                    <a href="http://coimbra.com/produtos/adicionar/" id="botaoVisualizar">Visualizar</a>
+                    <a href="http://coimbra.com/produtos/Editar/" id="botaoEditar">Editar</a>
+                    <a href="http://coimbra.com/produtos/Deletar/" id="botaoExcluir">Excluir</a>
+
                     </td>
                 </tr>
             <?php endforeach; ?>
